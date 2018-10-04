@@ -37,6 +37,7 @@ ul {
             }
         }
         #linkedin {
+            fill: #6a6a6a;
             &:hover {
                 stroke-width: 0;
                 color: orange;
@@ -44,6 +45,7 @@ ul {
             }
         }
         #mail {
+            fill: #6a6a6a;
             &:hover {
                 stroke-width: 0;
                 color: orange;
@@ -67,7 +69,7 @@ const Footer = () => (
         minHeight: '380px',
         color: '#6a6a6a',
         backgroundColor: 'rgba(20, 20, 20, 1)',
-        bottom: '0'
+        bottom: '0',
     }}
   >
     <SectionContainer>
