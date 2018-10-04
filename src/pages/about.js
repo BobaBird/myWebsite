@@ -25,6 +25,7 @@ const Container = styled.div`
   }
   a {
     color: #fff;
+    text-decoration: none;
     &:hover {
       color: #1f2023;
       border-bottom: 2px solid;

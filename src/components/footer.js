@@ -4,7 +4,6 @@ import { FaEnvelope, FaLinkedin } from 'react-icons/fa'
 import { FiTwitter, FiFacebook } from 'react-icons/fi'
 
 const SectionContainer = styled.div`
-
 text-align: center;
 justify-content: space-around;
 ul {
