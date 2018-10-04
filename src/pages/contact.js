@@ -20,7 +20,7 @@ const Container = styled.div`
   }
   a {
     color: #4d4d4d;
-    
+    text-decoration: none;
     &:hover {
 
       color: #1f2023;
