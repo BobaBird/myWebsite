@@ -76,7 +76,7 @@ const Footer = () => (
             <Titles>Social Media</Titles>
             <ul>
                 <li>
-                    <a href="https://twitter.com/oso_grizz" target="_blank" rel="noopener"><FiTwitter id="twitter" /></a> 
+                    <a href="https://twitter.com/oso_grizz" target="_blank" rel="noopener noreferrer"><FiTwitter id="twitter" /></a> 
                 </li>
                 <li>
                     <a href=""><FiFacebook id="facebook" /></a> 
@@ -85,7 +85,7 @@ const Footer = () => (
                     <a href="/contact/"><FaEnvelope id="mail" /></a> 
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/leohtorres/" target="_blank" rel="nopopener"><FaLinkedin id="linkedin" /></a> 
+                    <a href="https://www.linkedin.com/in/leohtorres/" target="_blank" rel="noopener noreferrer"><FaLinkedin id="linkedin" /></a> 
                 </li>
             </ul>
     </SectionContainer>

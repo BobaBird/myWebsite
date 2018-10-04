@@ -94,7 +94,7 @@ const Container = styled.div`
 
 const Contact = () => (
   <Layout>
-    <Container className="">
+    <Container>
         <h1>Contact</h1>
         <p>Want to get started; still have questions? Drop me a line.</p>
         <p></p>

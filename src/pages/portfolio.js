@@ -48,7 +48,7 @@ const CardContainer = styled.div`
 `
 
 const Portfolio = () => (
-  <Layout style={{background: '#323944'}}>
+  <Layout>
     <Container>
 
         <h1>Portfolio</h1>
@@ -56,7 +56,7 @@ const Portfolio = () => (
 
         <CardContainer>
             <div>
-                <a href="https://somaticwellness-coach.com/" target="_blank" rel="noopener">
+                <a href="https://somaticwellness-coach.com/" target="_blank" rel="noopener noreferrer">
                 {/* <Img
                     style={{height: '100%'}}
                     fluid={data.somatic.fluid} 
