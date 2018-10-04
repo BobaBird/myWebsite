@@ -53,7 +53,10 @@ ul {
     }
 }
 `
-
+const Titles = styled.h1`
+    font-size: 2rem;
+    text-align: center;
+`
 
 
 
@@ -68,6 +71,7 @@ const Footer = () => (
     }}
   >
     <SectionContainer>
+            <Titles>Social Media</Titles>
             <ul>
                 <li>
                     <a href="https://twitter.com/oso_grizz" target="_blank" rel="noopener"><FiTwitter id="twitter" /></a> 
