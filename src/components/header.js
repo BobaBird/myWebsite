@@ -5,10 +5,13 @@ import styled from 'styled-components'
 const HeaderWrapper = styled.div`
   position: relative;
   display: inline-flex;
-  max-width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
   // padding: 1.45rem 0rem 1.45rem;
   background: inherit;
   marginBottom: 1.45rem;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   h1 {
     font-weight: 500;
@@ -26,7 +29,7 @@ const HeaderWrapper = styled.div`
 
   ul {
     display: inline-flex;
-    margin-right: 20px;
+    // margin-right: 20px;
     li {
       list-style: none;
       margin-right: 20px;
@@ -39,29 +42,31 @@ const HeaderWrapper = styled.div`
     text-decoration: none;
     &:hover {
       transition: all 230ms ease;
-      border-bottom: 5px solid cornflowerblue;
+
     }
   }
   .active {
-    border-bottom: 5px solid cornflowerblue;
+
   }
 `
 
 const HeaderContainer = styled.div`
+  display: flex;
   margin: 0 auto;
-  max-width: 90vw;
+  max-width: 95vw;
   padding: 1.45rem 1.0875rem;
 `
 
 const LogoContainer = styled.div`
-  min-width: 75vw;
+  min-width: 70vw;
+  text-decoration: none;
 `
 
 const NavContainer = styled.div`
+  margin-right: 0;
   z-index: 3;
-  min-width: 25vw;
+  max-width: 25vw;
   margin: 0;
-
   a {
     &:hover {
       transition: all 230ms ease;
@@ -79,7 +84,7 @@ const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <HeaderContainer>
       <LogoContainer>
-        <h1 style={{ margin: 0 }}>
+        <h1>
           <Link
             to="/"
             style={{
