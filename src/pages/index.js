@@ -6,13 +6,12 @@ import Layout from '../components/layout'
 const Container = styled.div`
   position: relative;
   z-index: 2;
+  margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
   margin-top: 1.45rem;
   max-width: 960px;
   text-shadow: 2px 2px 8px #4d4d4d, -2px -2px 8px #4d4d4d;
   color: #fff;
-  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-  // Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   p {
     color: #fff;
   }

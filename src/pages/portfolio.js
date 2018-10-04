@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 
 
 const Container = styled.div`
+    // background: #323944;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -29,48 +30,56 @@ const Container = styled.div`
         color: #898989;
         border-bottom: 2px solid;
     }
-    }
+}
+`
+const CardContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  padding: 1.45rem 1.0875rem 1.45rem;
+
+  @media only screen and (maxWidth: 425px) {
+    display: inline-block;
+    justify-content: space-around;
+
+  }
+  @media only screen and (min-width: 425px) {
+    padding: 0 !important;
+  }
 `
 
 const Portfolio = () => (
-  <Layout>
+  <Layout style={{background: '#323944'}}>
     <Container>
 
-    <h1>Portfolio</h1>
-    <p>Please have a look at some examples of my work.</p>
+        <h1>Portfolio</h1>
+        <p>Please have a look at some examples of my work.</p>
 
-    <div>
-        <div>
-            <a href="https://somaticwellness-coach.com/" target="_blank" rel="noopener">
-            {/* <Img
-                style={{height: '100%'}}
-                fluid={data.somatic.fluid} 
-            /> */}
-            </a>
-        </div>
+        <CardContainer>
+            <div>
+                <a href="https://somaticwellness-coach.com/" target="_blank" rel="noopener">
+                {/* <Img
+                    style={{height: '100%'}}
+                    fluid={data.somatic.fluid} 
+                /> */}
+                </a>
+            </div>
 
-        <div>
-            {/* <Img
-            
-            fluid={data.card.fluid} 
-            /> */}
-        </div>
+            <div>
+                {/* <Img
+                
+                fluid={data.card.fluid} 
+                /> */}
+            </div>
 
-        <div>
-            {/* <Img
-            
-            fluid={data.card.fluid} 
-            /> */}
-        </div>
+            <div>
+                {/* <Img
+                
+                fluid={data.card.fluid} 
+                /> */}
+            </div>
+        </CardContainer>
 
-        
-        <div>
-            {/* <Img
-            
-            fluid={data.card.fluid} 
-            /> */}
-        </div>
-
+        <CardContainer>
         <div>
             {/* <Img
             
@@ -84,8 +93,17 @@ const Portfolio = () => (
             fluid={data.card.fluid} 
             /> */}
         </div>
+
+        <div>
+            {/* <Img
+            
+            fluid={data.card.fluid} 
+            /> */}
         </div>
+        </CardContainer>
+
         <Link to="/">Go back to the homepage</Link>
+
     </Container>
   </Layout>
 )
