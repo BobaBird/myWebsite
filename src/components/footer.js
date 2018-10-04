@@ -9,7 +9,7 @@ const Footer = () => (
     style={{
         minHeight: '120px',
         backgroundColor: 'rgba(20, 20, 20, 1)',
-        marginBottom: '1.45rem',
+        marginBottom: '0',
     }}
   >
   </div>
