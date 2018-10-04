@@ -11,7 +11,12 @@ const About = () => (
       man team that can provide you with a professional, great looking website to showcase
       your Blog, Business or whatever it is you want to share.
     </p>
-    <Link to="/">Go back to the homepage</Link>
+    <p >
+            <Link to="/portfolio/"> Take a look at some of my work.</Link>
+          </p> 
+          <p>
+            <Link to="/contact/"> Or, let's get started now.</Link>
+          </p>
   </Layout>
 )
 
