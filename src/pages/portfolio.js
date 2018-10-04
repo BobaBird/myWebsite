@@ -17,15 +17,14 @@ const Container = styled.div`
     margin-bottom: 200px;
     max-width: 960px;
     min-height: 80vh;
-
     color: #4d4d4d;
 
     p {
-    
+
     }
     a {
-    color; #4d4d4d;
-
+    color: #4d4d4d;
+    text-decoration: none;
     &:hover {
         color: #898989;
         border-bottom: 2px solid;
