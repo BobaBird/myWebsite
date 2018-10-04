@@ -6,7 +6,6 @@ import Layout from '../components/layout'
 
 
 const Container = styled.div`
-    // background: #323944;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -46,7 +45,12 @@ const CardContainer = styled.div`
   }
 `
 
+const Wrapper = styled.div`
+  background: #323944 !important;
+`
+
 const Portfolio = () => (
+    <Wrapper>
   <Layout>
     <Container>
 
@@ -105,6 +109,7 @@ const Portfolio = () => (
 
     </Container>
   </Layout>
+  </Wrapper> 
 )
 
 export default Portfolio
