@@ -27,9 +27,9 @@ const Container = styled.div`
 const IndexPage = () => (
   <Layout>
     <Container>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
+          <h1>Leo Torres | Web Developer</h1>
+          <h2 >Websites, Blogs, E-Commerce</h2>
+          <p >Custom sites for what you need.</p>
     </Container>
   </Layout>
 )
