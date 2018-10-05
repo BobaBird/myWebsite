@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => (
         width: '100vw',
         // height: '122.82vh',
         height: '119vh',
-        filter: 'brightness(90%)',
+        filter: 'brightness(80%)',
         overflow: 'hidden',
         zIndex: '-1',
       }}

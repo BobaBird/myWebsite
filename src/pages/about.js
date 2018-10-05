@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
@@ -32,8 +34,26 @@ const Container = styled.div`
     }
   }
 `
+const Wrapper = styled.div`
 
-const About = () => (
+`
+
+const About = ({ data }) => (
+  <Wrapper>
+    <Img
+      style={{
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        width: '100vw',
+        // height: '122.82vh',
+        height: '119vh',
+        filter: 'brightness(80%)',
+        overflow: 'hidden',
+        zIndex: '-1',
+      }}
+      fluid={data.background.fluid} alt="Bears in the mist." 
+      />   
   <Layout>
     <Container>
     <h1>About</h1>
@@ -50,6 +70,17 @@ const About = () => (
     </p>
     </Container>
   </Layout>
+  </Wrapper> 
 )
 
 export default About
+
+export const query = graphql`
+  query aboutPage {
+    background: imageSharp(fluid: {originalName: {eq: "homeBG.jpg" } } ) {
+			fluid(maxWidth: 1240) {
+      ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
