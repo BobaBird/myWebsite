@@ -64,7 +64,8 @@ const Titles = styled.h1`
 const Footer = () => (
   <div
     style={{
-        paddingTop: '150px',
+        position: 'static',
+        paddingTop: '120px',
         minHeight: '380px',
         color: '#6a6a6a',
         backgroundColor: 'rgba(20, 20, 20, 1)',

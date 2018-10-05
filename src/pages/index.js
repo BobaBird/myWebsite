@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 
@@ -24,7 +26,26 @@ const Container = styled.div`
   }
 `
 
-const IndexPage = () => (
+const Wrapper = styled.div`
+
+`
+
+const IndexPage = ({ data }) => (
+  <Wrapper> 
+    <Img
+      style={{
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        width: '100vw',
+        // height: '122.82vh',
+        height: '119vh',
+        filter: 'brightness(90%)',
+        overflow: 'hidden',
+        zIndex: '-1',
+      }}
+      fluid={data.background.fluid} alt="Bears in the mist." 
+      />   
   <Layout>
     <Container>
           <h1>Leo Torres | Web Developer</h1>
@@ -32,6 +53,17 @@ const IndexPage = () => (
           <p >Custom sites for what you need.</p>
     </Container>
   </Layout>
+  </Wrapper>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query siteImageQuery {
+    background: imageSharp(fluid: {originalName: {eq: "homeBG.jpg" } } ) {
+			fluid(maxWidth: 1240) {
+      ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
