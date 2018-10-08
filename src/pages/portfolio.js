@@ -106,10 +106,17 @@ const Card = styled.div`
   @media (max-width: 475px) {
     margin: 40px auto;
     min-width: 80vw;
-    
+
     p {
       font-size: 0.8rem;
     }
+  }
+
+  @media (min-width: 476px) and (max-width: 1315px) {
+    display: block;
+    padding: 0;
+    margin: 40px auto;
+    width: 50vw;
   }
   `
 
