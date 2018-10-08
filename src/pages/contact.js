@@ -15,6 +15,11 @@ const Container = styled.div`
   min-height: 80vh;
   color: #4d4d4d;
 
+  h1 {
+    font-size: 3.25rem;
+    font-weight: 300;
+  }
+
   p {
     
   }

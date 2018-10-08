@@ -22,8 +22,9 @@ const Container = styled.div`
     line-height: 2.9rem;
     font-weight: 300;
   }
-  h2 {
-    
+  h1 {
+    font-size: 3.25rem;
+    font-weight: 300;
   }
   a {
     color: #fff;
@@ -35,7 +36,7 @@ const Container = styled.div`
   }
 `
 const Wrapper = styled.div`
-
+  
 `
 
 const About = ({ data }) => (

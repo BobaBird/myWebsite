@@ -14,6 +14,13 @@ const Container = styled.div`
   max-width: 960px;
   text-shadow: 2px 2px 8px #4d4d4d, -2px -2px 8px #4d4d4d;
   color: #fff;
+  h1 {
+    font-size: 3.25rem;
+    font-weight: 300;
+  }
+  h2 {
+    font-weight: 300;
+  }
   p {
     color: #fff;
   }

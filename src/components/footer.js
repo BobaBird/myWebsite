@@ -11,7 +11,8 @@ ul {
     align-items: center;
     li {
         display: inline-flex;
-        margin-right: 20px;
+        margin-left: 0 auto;
+        padding:  0 10px;
         
         svg {
             height: 1.3em;
@@ -56,6 +57,7 @@ ul {
 `
 const Titles = styled.h1`
     font-size: 2rem;
+    font-weight: 300;
     text-align: center;
 `
 
