@@ -6,6 +6,27 @@ import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 
+const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px'
+}
+
+export const device = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`
+}
+
 
 const Container = styled.div`
     text-align: center;
@@ -30,26 +51,30 @@ const Container = styled.div`
     a {
     color: #4d4d4d;
     text-decoration: none;
-    &:hover {
+      &:hover {
         color: #898989;
         border-bottom: 2px solid;
+      }
     }
-}
+    @media (max-width: 475px) {
+      display: block;
+    }
+
 `
 const CardContainer = styled.div`
-  display: flex;
+  display: flex;;
   justify-content: space-around;
-  padding: 1.45rem 1.0875rem 1.45rem;
+  // padding: 1.45rem 1.0875rem 1.45rem;
 
-  @media only screen and (maxWidth: 425px) {
-    display: inline-block;
-    justify-content: space-around;
-
+  @media (max-width: 475px) {
+    display: block;
+    padding: 0;
   }
-  @media only screen and (min-width: 425px) {
-    padding: 0 !important;
+  @media (min-width: 476px) and (max-width: 1315px) {
+    display: block;
+    padding: 0;
   }
-`
+`;
 const Card = styled.div`
   position: relative;
   margin: 20px;
@@ -57,7 +82,6 @@ const Card = styled.div`
   overflow: hidden;
   border-radius: 4px;
   min-width: 400px;
-  
   box-shadow: 0 8px 26px 0 rgba(0, 0, 0, 0.15), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
 
   h1 {
@@ -79,14 +103,11 @@ const Card = styled.div`
     color: #fff;
   }
 
-  @media only screen and (max-width 1082px) and (min-width: 426px) {
-    margin-top: 2.5rem;
-  }
-
-  @media only screen and (max-width: 425px) {
-    margin-top: 80px;
+  @media (max-width: 475px) {
+    margin: 40px auto;
+    min-width: 80vw;
+    
     p {
-
       font-size: 0.8rem;
     }
   }
@@ -94,6 +115,12 @@ const Card = styled.div`
 
 const Wrapper = styled.div`
   background: #323944 !important;
+
+  @media  (max-width: 475px) {
+    max-width: 100vw;
+    padding: 0.025rem;
+    overflow: hidden;
+  }
 `
 
 const Portfolio = ({ data }) => (

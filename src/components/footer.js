@@ -68,7 +68,7 @@ const Footer = () => (
     style={{
         position: 'static',
         paddingTop: '120px',
-        minHeight: '380px',
+        minHeight: '390px',
         color: '#6a6a6a',
         backgroundColor: 'rgba(20, 20, 20, 1)',
         bottom: '0',
@@ -81,7 +81,7 @@ const Footer = () => (
                     <a href="https://twitter.com/oso_grizz" target="_blank" rel="noopener noreferrer"><FiTwitter id="twitter" /></a> 
                 </li>
                 <li>
-                    <a href=""><FiFacebook id="facebook" /></a> 
+                    <a href="" label="facebook" tooltiptext="Coming soon."><FiFacebook id="facebook" /></a> 
                 </li>
                 <li>
                     <a href="/contact/"><FaEnvelope id="mail" /></a> 
