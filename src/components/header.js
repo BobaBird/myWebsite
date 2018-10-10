@@ -1,6 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import Toggle from "./toggle"
+import { FiMenu } from 'react-icons/fi'
+import Portal from '../portal'
+
+import NavMenu from './nav-menu'
 
 const HeaderWrapper = styled.div`
   position: relative;
@@ -48,6 +53,12 @@ const HeaderWrapper = styled.div`
   .active {
 
   }
+
+  @media (max-width: 1565px) {
+    margin: 0;
+    width: 100%;
+    background: #323944;
+  }
 `
 
 const HeaderContainer = styled.div`
@@ -76,6 +87,41 @@ const NavContainer = styled.div`
   .active {
     border-bottom: 5px solid cornflowerblue;
   }
+
+  @media (max-width: 1565px) {
+    ul {
+      visibility: hidden;
+    }
+  }
+`
+
+const MobileNavWrapper = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    background: inherit;
+    color: cornflowerblue;
+    border: none;
+    outline: none;
+    z-index: -1;
+  }
+  svg {
+    visibility: hidden;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  @media (max-width: 1564px) {
+    button {
+      z-index: 1;
+    }  
+    svg {
+      visibility: visible;
+    }
+  }
 `
 
 
@@ -96,7 +142,36 @@ const Header = ({ siteTitle }) => (
           </Link>
         </h1>
       </LogoContainer>
+
+ 
+
       <NavContainer>
+      <MobileNavWrapper>
+        <Toggle> 
+          {({on, toggle}) => (
+            <>
+            <button onClick={toggle}><FiMenu /></button>
+            <NavMenu on={on} toggle={toggle}>
+                <ul>
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/about/">About</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact/">Contact</Link>
+                  </li>
+                  <li>
+                    <Link to="/portfolio/">Portfolio</Link>
+                  </li>
+                </ul>        
+            </NavMenu>    
+            </>
+          )}
+        </Toggle>
+      </MobileNavWrapper>
+      
       <ul>
         <li>
           <Link to="/">Home</Link>
