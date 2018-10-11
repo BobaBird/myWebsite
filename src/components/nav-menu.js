@@ -41,9 +41,11 @@ const MobileNavWrapper = styled.div`
         list-style: none;
         li {
             padding: 20px 0;
+            width: 30vw;
             a {
                 text-decoration: none;
                 color: #fff;
+                letter-spacing: 0.2rem;
             }
         }
     }
