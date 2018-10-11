@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import ReactDOM from 'react-dom'
 
 
-const portalRoot = document.getElementById('portal')
 
 export default class Portal extends Component {
     
@@ -10,8 +9,9 @@ export default class Portal extends Component {
         super()
         this.el = document.createElement('div')
     }
-
+    
     componentDidMount = () => {
+        const portalRoot = document.getElementById('portal')
         portalRoot.appendChild(this.el)
     }
 
