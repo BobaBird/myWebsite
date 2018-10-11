@@ -45,7 +45,8 @@ const MobileNavWrapper = styled.div`
             a {
                 text-decoration: none;
                 color: #fff;
-                letter-spacing: 0.2rem;
+                letter-spacing: 0.08rem;
+                text-transform: uppercase;
             }
         }
     }
