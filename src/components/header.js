@@ -1,11 +1,10 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import Toggle from "../Utilities/toggle"
-import { FiMenu } from 'react-icons/fi'
-// import Portal from './portal'
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { FiMenu } from 'react-icons/fi';
+import Toggle from '../Utilities/toggle';
 
-import NavMenu from './nav-menu'
+import NavMenu from './nav-menu';
 
 const HeaderWrapper = styled.div`
   position: relative;
@@ -59,14 +58,14 @@ const HeaderWrapper = styled.div`
     width: 100%;
     background: #323944;
   }
-`
+`;
 
 const HeaderContainer = styled.div`
   display: flex;
   margin: 0 auto;
   max-width: 95vw;
   padding: 1.45rem 1.0875rem;
-`
+`;
 
 const LogoContainer = styled.div`
   min-width: 70vw;
@@ -75,7 +74,7 @@ const LogoContainer = styled.div`
   @media (max-width: 1565px) {
     width: 70vw;
   }
-`
+`;
 
 const NavContainer = styled.div`
   z-index: 3;
@@ -96,7 +95,7 @@ const NavContainer = styled.div`
       visibility: hidden;
     }
   }
-`
+`;
 
 const MobileNavWrapper = styled.div`
   margin-left: 500px;
@@ -126,8 +125,7 @@ const MobileNavWrapper = styled.div`
       visibility: visible;
     }
   }
-`
-
+`;
 
 
 const Header = ({ siteTitle }) => (
@@ -147,15 +145,14 @@ const Header = ({ siteTitle }) => (
         </h1>
       </LogoContainer>
 
- 
 
       <NavContainer>
-      <MobileNavWrapper>
-        <Toggle> 
-          {({on, toggle}) => (
+        <MobileNavWrapper>
+          <Toggle>
+            {({ on, toggle }) => (
             <>
-            <button onClick={toggle}><FiMenu /></button>
-            <NavMenu on={on} toggle={toggle}>
+              <button type="button" onClick={toggle}><FiMenu /></button>
+              <NavMenu on={on} toggle={toggle}>
                 <ul>
                   <li>
                     <Link to="/" onClick={toggle}>Home</Link>
@@ -172,30 +169,30 @@ const Header = ({ siteTitle }) => (
                   <li>
                     <Link to="/portfolio/" onClick={toggle}>Portfolio</Link>
                   </li>
-                </ul>        
-            </NavMenu>    
+                </ul>
+              </NavMenu>
             </>
-          )}
-        </Toggle>
-      </MobileNavWrapper>
-      
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about/">About</Link>
-        </li>
-        <li>
-          <Link to="/contact/">Contact</Link>
-        </li>
-        <li>
-          <Link to="/portfolio/">Portfolio</Link>
-        </li>
-      </ul>
+            )}
+          </Toggle>
+        </MobileNavWrapper>
+
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about/">About</Link>
+          </li>
+          <li>
+            <Link to="/contact/">Contact</Link>
+          </li>
+          <li>
+            <Link to="/portfolio/">Portfolio</Link>
+          </li>
+        </ul>
       </NavContainer>
     </HeaderContainer>
   </HeaderWrapper>
-)
+);
 
-export default Header
+export default Header;

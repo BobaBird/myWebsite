@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 const Container = styled.div`
   position: relative;
@@ -94,39 +94,57 @@ const Container = styled.div`
   textarea {
     border: 1px solid #4d4d4d;
   }
+  #textArea {
+    display: block;
+    margin-left: 225px;
+    padding: 20px 0;
+  }
   
-`
+  @media (max-width: 1574px) {
+    text-align: center;
+    textarea {
+      max-width: 80%;
+    }
+    #textArea {
+      margin 0;
+    }
+  }
+`;
 
 const Contact = () => (
   <Layout>
     <Container>
-        <h1>Contact</h1>
-        <p>Want to get started; still have questions? Drop me a line.</p>
-        <p></p>
+      <h1>Contact</h1>
+      <p>Want to get started; still have questions? Drop me a line.</p>
+      <p />
 
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>Your Name: </label>   
-              <input type="text" name="name" required />
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email" required /></label>
-          </p>
-          
-          <p >
-            <label style={{display: 'block', marginLeft: '225px', padding: '20px 0'}} >Message </label>
-            <textarea name="message" cols="50" rows="8" required ></textarea>
-            
-          </p>
-          <p>
-            <button className="contactBtn "  type="submit"><span>Send</span></button>
-          </p>
-        </form>
+        <p>
+          <label>Your Name: </label>
+          <input type="text" name="name" required />
+        </p>
+        <p>
+          <label>
+Your Email:
+            {' '}
+            <input type="email" name="email" required />
+          </label>
+        </p>
 
-        <Link to="/">Go back to the homepage</Link>
-      </Container>
+        <p>
+          <label id="textArea">Message </label>
+          <textarea name="message" cols="50" rows="8" required />
+
+        </p>
+        <p>
+          <button className="contactBtn " type="submit"><span>Send</span></button>
+        </p>
+      </form>
+
+      <Link to="/">Go back to the homepage</Link>
+    </Container>
   </Layout>
-)
+);
 
-export default Contact
+export default Contact;

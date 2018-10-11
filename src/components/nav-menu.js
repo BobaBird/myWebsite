@@ -1,24 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Portal from '../Utilities/portal';
+// import Portal from '../Utilities/portal';
 
-
-export default class NavMenu extends Component {
-  render() {
-    const { children, on } = this.props;
-    return (
-      <Portal>
-        {on
-        && (
-        <MobileNavWrapper>
-          <div>{children}</div>
-        </MobileNavWrapper>
-        )
-        }
-      </Portal>
-    );
-  }
-}
 
 const MobileNavWrapper = styled.div`
     display: flex;
@@ -61,3 +44,20 @@ const MobileNavWrapper = styled.div`
       }
     }
 `;
+
+export default class NavMenu extends Component {
+  render() {
+    const { children, on } = this.props;
+    return (
+      <div>
+        {on
+        && (
+        <MobileNavWrapper>
+          <div>{children}</div>
+        </MobileNavWrapper>
+        )
+        }
+      </div>
+    );
+  }
+}
