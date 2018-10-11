@@ -71,12 +71,15 @@ const HeaderContainer = styled.div`
 const LogoContainer = styled.div`
   min-width: 70vw;
   text-decoration: none;
+
+  @media (max-width: 1565px) {
+    width: 30vw;
+  }
 `
 
 const NavContainer = styled.div`
-  margin-right: 0;
   z-index: 3;
-  max-width: 25vw;
+  max-width: 30vw;
   margin: 0;
   a {
     &:hover {
@@ -96,25 +99,26 @@ const NavContainer = styled.div`
 `
 
 const MobileNavWrapper = styled.div`
+  margin-left: 500px;
   position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
 
   button {
     background: inherit;
     color: cornflowerblue;
     border: none;
     outline: none;
-    z-index: -1;
+    margin-right: 80px;
+
   }
   svg {
-    visibility: hidden;
     height: 3rem;
     width: 3rem;
   }
 
   @media (max-width: 1564px) {
+    margin: 0;
+    
     button {
       z-index: 1;
     }  
