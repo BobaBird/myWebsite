@@ -11,11 +11,11 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'img',
-        path: `${__dirname}/src/images`
+        path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Leo-T',
         short_name: 'Leo-T',
@@ -28,4 +28,4 @@ module.exports = {
     },
     'gatsby-plugin-offline',
   ],
-}
+};

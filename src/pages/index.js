@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import React from 'react';
+import styled from 'styled-components';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 const Container = styled.div`
   position: relative;
@@ -31,14 +31,14 @@ const Container = styled.div`
       border-bottom: 2px solid;
     }
   }
-`
+`;
 
 const Wrapper = styled.div`
 
-`
+`;
 
 const IndexPage = ({ data }) => (
-  <Wrapper> 
+  <Wrapper>
     <Img
       style={{
         position: 'absolute',
@@ -51,19 +51,20 @@ const IndexPage = ({ data }) => (
         overflow: 'hidden',
         zIndex: '-1',
       }}
-      fluid={data.background.fluid} alt="Bears in the mist." 
-      />   
-  <Layout>
-    <Container>
-          <h1>Leo Torres | Web Developer</h1>
-          <h2 >Websites, Blogs, E-Commerce</h2>
-          <p >Custom sites for what you need.</p>
-    </Container>
-  </Layout>
+      fluid={data.background.fluid}
+      alt="Bears in the mist."
+    />
+    <Layout>
+      <Container>
+        <h1>Leo Torres | Web Developer</h1>
+        <h2>Websites, Blogs, E-Commerce</h2>
+        <p>Custom sites for what you need.</p>
+      </Container>
+    </Layout>
   </Wrapper>
-)
+);
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query siteImageQuery {
@@ -73,4 +74,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

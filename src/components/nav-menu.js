@@ -1,21 +1,22 @@
-import React, { Component } from 'react'
-import Portal from './portal'
-import styled from 'styled-components'
-
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Portal from '../Utilities/portal';
 
 
 export default class NavMenu extends Component {
   render() {
-      const { children, on } = this.props
+    const { children, on } = this.props;
     return (
       <Portal>
-        {on && 
+        {on
+        && (
         <MobileNavWrapper>
-            <div>{children}</div> 
+          <div>{children}</div>
         </MobileNavWrapper>
+        )
         }
       </Portal>
-    )
+    );
   }
 }
 
@@ -50,4 +51,13 @@ const MobileNavWrapper = styled.div`
             }
         }
     }
-`
+
+    @media (max-width: 574px) {
+      ul {
+        li {
+          padding: 20px;
+          width: 65vw;
+        }
+      }
+    }
+`;
