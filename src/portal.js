@@ -1,17 +1,20 @@
-import React, { Component } from "react"
+import { Component } from "react"
 import ReactDOM from 'react-dom'
 
-
+if (typeof window !== `undefined`) {
+    const portalRoot = document.getElementById('portal')
+  }
 
 export default class Portal extends Component {
     
     constructor() {
         super()
-        this.el = document.createElement('div')
+        if (typeof window !== `undefined`) {
+            this.el = document.createElement('div')
+          }
     }
     
     componentDidMount = () => {
-        const portalRoot = document.getElementById('portal')
         portalRoot.appendChild(this.el)
     }
 
