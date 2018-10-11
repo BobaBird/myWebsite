@@ -73,7 +73,7 @@ const LogoContainer = styled.div`
   text-decoration: none;
 
   @media (max-width: 1565px) {
-    width: 30vw;
+    width: 70vw;
   }
 `
 
