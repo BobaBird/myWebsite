@@ -1,17 +1,14 @@
 import { Component } from "react"
 import ReactDOM from 'react-dom'
 
-if (typeof window !== `undefined`) {
-    const portalRoot = document.getElementById('portal')
-  }
+const portalRoot = document.getElementById('portal')
+
 
 export default class Portal extends Component {
     
     constructor() {
         super()
-        if (typeof window !== `undefined`) {
-            this.el = document.createElement('div')
-          }
+        this.el = document.createElement('div')
     }
     
     componentDidMount = () => {

@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa'
-import { FiTwitter, FiFacebook } from 'react-icons/fi'
+import { FiTwitter } from 'react-icons/fi'
+// FiFacebook -- to add Facebook SVG image
+
 
 const SectionContainer = styled.div`
 text-align: center;
@@ -80,9 +82,9 @@ const Footer = () => (
                 <li>
                     <a href="https://twitter.com/oso_grizz" target="_blank" rel="noopener noreferrer"><FiTwitter id="twitter" /></a> 
                 </li>
-                <li>
+                {/* <li>
                     <a href="" label="facebook" tooltiptext="Coming soon."><FiFacebook id="facebook" /></a> 
-                </li>
+                </li> */}
                 <li>
                     <a href="/contact/"><FaEnvelope id="mail" /></a> 
                 </li>

@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import Portal from './portal'
 import styled from 'styled-components'
-import { FiMenu } from 'react-icons/fi'
-import { Link } from 'gatsby'
+
 
 
 export default class NavMenu extends Component {
   render() {
-      const { children, toggle, on } = this.props
+      const { children, on } = this.props
     return (
       <Portal>
         {on && 
@@ -48,9 +47,4 @@ const MobileNavWrapper = styled.div`
             }
         }
     }
-`
-
-const NavContainer = styled.div`
-    position: relative;
-    padding: 15px;
 `
