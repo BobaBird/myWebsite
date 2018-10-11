@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Portal from '../portal'
+import Portal from './portal'
 import styled from 'styled-components'
 import { FiMenu } from 'react-icons/fi'
 import { Link } from 'gatsby'

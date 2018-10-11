@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Toggle from "./toggle"
 import { FiMenu } from 'react-icons/fi'
-import Portal from '../portal'
+import Portal from './portal'
 
 import NavMenu from './nav-menu'
 
