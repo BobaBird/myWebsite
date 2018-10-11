@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import ReactDOM from 'react-dom'
 
+document != 'undefined'
+
 const portalRoot = document.getElementById('portal')
 
 export default class Portal extends Component {
@@ -16,8 +18,6 @@ export default class Portal extends Component {
     componentWillUnmount = () => {
       portalRoot.removeChild(this.el)
     }
-    
-    
 
     render() {
         const { children } = this.props

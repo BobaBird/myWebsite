@@ -118,7 +118,7 @@ const MobileNavWrapper = styled.div`
 
   @media (max-width: 1564px) {
     margin: 0;
-    
+
     button {
       z-index: 1;
     }  
@@ -158,16 +158,19 @@ const Header = ({ siteTitle }) => (
             <NavMenu on={on} toggle={toggle}>
                 <ul>
                   <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/" onClick={toggle}>Home</Link>
                   </li>
+                  <hr />
                   <li>
-                    <Link to="/about/">About</Link>
+                    <Link to="/about/" onClick={toggle}>About</Link>
                   </li>
+                  <hr />
                   <li>
-                    <Link to="/contact/">Contact</Link>
+                    <Link to="/contact/" onClick={toggle}>Contact</Link>
                   </li>
+                  <hr />
                   <li>
-                    <Link to="/portfolio/">Portfolio</Link>
+                    <Link to="/portfolio/" onClick={toggle}>Portfolio</Link>
                   </li>
                 </ul>        
             </NavMenu>    

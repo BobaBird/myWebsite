@@ -23,7 +23,7 @@ export default class NavMenu extends Component {
 const MobileNavWrapper = styled.div`
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     position: absolute;
     top: 4rem;
     left: 0;
@@ -31,7 +31,8 @@ const MobileNavWrapper = styled.div`
     height: 55%;
     background: #323944;
     // border-radius: 5px;
-    box-shadow: 2px 2px  black;
+    margin-top: 20px;
+    box-shadow: 0px 10px 8px rgba(20, 20, 20, 0.6);
     z-index: 10;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
         Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
