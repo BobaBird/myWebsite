@@ -27,11 +27,16 @@ const MobileNavWrapper = styled.div`
     border: none;
     outline: none;
     margin-right: 80px;
+    height: 0;
+    width: 0;
+    
 
   }
   svg {
+    visibility: hidden;
     height: 3rem;
     width: 3rem;
+
   }
 
   @media (max-width: 1564px) {
@@ -41,6 +46,8 @@ const MobileNavWrapper = styled.div`
       z-index: 1;
     }  
     svg {
+      
+      margin: 0;
       visibility: visible;
     }
   }
@@ -72,10 +79,10 @@ const Layout = ({ children }) => (
         <MobileNavWrapper>
           <Toggle>
             {({ on, toggle }) => (
-              <div>
+              <>
                 <button onClick={toggle}><FiMenu /></button>
                 {on && <NavMenu on={on} />}
-              </div> 
+              </> 
 
             )}
           </Toggle>
