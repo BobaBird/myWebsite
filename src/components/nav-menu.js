@@ -2,20 +2,22 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import Toggle from '../Utilities/toggle';
+import Portal from './portal';
 
-const MobileNavWrapper = styled.div`
+const Wrapper = styled.div`
     position: absolute;
     display: flex;
     justify-content: center;
+    align-items: right;
     text-align: center;
     top: 4rem;
-    top: 80px;
+    top: 90px;
     left: 0;
     width: 100%;
-    // height: 55%;
+    padding: 20px;
     background: #323944;
     // border-radius: 5px;
-    // margin-top: 20px;
+    margin-top: 20px;
     box-shadow: 0px 10px 8px rgba(20, 20, 20, 0.6);
     z-index: 99;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
@@ -36,6 +38,7 @@ const MobileNavWrapper = styled.div`
         }
     }
 
+
     @media (max-width: 574px) {
       ul {
         li {
@@ -50,11 +53,8 @@ export default class NavMenu extends Component {
   render() {
     const { children, toggle, on } = this.props;
     return (
-      <div>
-        <Toggle>
-        {({ on, toggle }) => (
-              
-          <MobileNavWrapper>
+      
+          <Wrapper>
             <ul>
               <li>
                 <Link to="/" onClick={toggle}>Home</Link>
@@ -72,12 +72,8 @@ export default class NavMenu extends Component {
                 <Link to="/portfolio/" onClick={toggle}>Portfolio</Link>
               </li>
             </ul>
-          </MobileNavWrapper>
+          </Wrapper>
 
-            )}
-        </Toggle>
-
-      </div>
     );
   }
 }

@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { FiMenu } from 'react-icons/fi';
 import Toggle from '../Utilities/toggle';
 import NavMenu from './nav-menu';
-
-// import NavMenu from './nav-menu';
+import Portal from './portal';
 
 const HeaderWrapper = styled.div`
   position: relative;
@@ -54,7 +53,7 @@ const HeaderWrapper = styled.div`
 
   }
 
-  @media (max-width: 1565px) {
+  @media (max-width: 1050px) {
     margin: 0;
     width: 100%;
     background: #323944;
@@ -66,14 +65,23 @@ const HeaderContainer = styled.div`
   margin: 0 auto;
   max-width: 95vw;
   padding: 1.45rem 1.0875rem;
+
+  @media (max-width: 1565px) and (min-width: 1051px) {
+    margin: 0;  
+  }
 `;
 
 const LogoContainer = styled.div`
-  min-width: 70vw;
+  width: 70vw;
   text-decoration: none;
 
   @media (max-width: 1565px) {
     width: 70vw;
+  }
+
+  @media (max-width: 1565px) and (min-width: 1051px) {
+    margin: 0;  
+    max-width: 50vw;
   }
 `;
 
@@ -91,43 +99,56 @@ const NavContainer = styled.div`
     border-bottom: 5px solid cornflowerblue;
   }
 
-  @media (max-width: 1565px) {
+  @media (max-width: 1050px) {
     ul {
       visibility: hidden;
     }
   }
+  @media (max-width: 1565px) and (min-width: 1051px) {
+    ul {
+      margin-right: 
+    }
+  }
 `;
 
-// const MobileNavWrapper = styled.div`
-//   // margin-left: 500px;
-//   width: 100vw;
-//   position: absolute;
-//   display: flex;
+const MobileNavWrapper = styled.div`
+  margin-left: 900px;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-//   button {
-//     background: inherit;
-//     color: cornflowerblue;
-//     border: none;
-//     outline: none;
-//     margin-right: 80px;
+  button {
+    background: inherit;
+    color: cornflowerblue;
+    border: none;
+    outline: none;
+    margin-right: 80px;
 
-//   }
-//   svg {
-//     height: 3rem;
-//     width: 3rem;
-//   }
+  }
+  svg {
+    height: 3rem;
+    width: 3rem;
+  }
 
-//   @media (max-width: 1564px) {
-//     margin: 0;
+  @media (max-width: 574px) {
+    button {
+      margin-left: 200px;
+    }
+  }
 
-//     button {
-//       z-index: 1;
-//     }  
-//     svg {
-//       visibility: visible;
-//     }
-//   }
-// `;
+  @media (max-width: 1050px) {
+    margin: 0px;
+
+    button {
+      z-index: 1;
+    }  
+    svg {
+      visibility: visible;
+    }
+  }
+`;
 
 
 const Header = ({ siteTitle }) => (
@@ -146,6 +167,21 @@ const Header = ({ siteTitle }) => (
           </Link>
         </h1>
       </LogoContainer>
+
+
+      <MobileNavWrapper>
+          <Toggle>
+            {({ on, toggle }) => (
+              <>
+                <button onClick={toggle}><FiMenu /></button>
+                <Portal>
+                  {on && <NavMenu on={on} toggle={toggle}/>  }
+                </Portal>
+              </> 
+
+            )}
+          </Toggle>
+        </MobileNavWrapper>
 
 
       <NavContainer>
