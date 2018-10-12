@@ -68,6 +68,7 @@ const HeaderContainer = styled.div`
 
   @media (max-width: 1565px) and (min-width: 1051px) {
     margin: 0;  
+    width: 100vw;
   }
 `;
 
