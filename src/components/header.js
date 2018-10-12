@@ -3,8 +3,9 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { FiMenu } from 'react-icons/fi';
 import Toggle from '../Utilities/toggle';
-
 import NavMenu from './nav-menu';
+
+// import NavMenu from './nav-menu';
 
 const HeaderWrapper = styled.div`
   position: relative;
@@ -97,35 +98,36 @@ const NavContainer = styled.div`
   }
 `;
 
-const MobileNavWrapper = styled.div`
-  margin-left: 500px;
-  position: absolute;
-  display: flex;
+// const MobileNavWrapper = styled.div`
+//   // margin-left: 500px;
+//   width: 100vw;
+//   position: absolute;
+//   display: flex;
 
-  button {
-    background: inherit;
-    color: cornflowerblue;
-    border: none;
-    outline: none;
-    margin-right: 80px;
+//   button {
+//     background: inherit;
+//     color: cornflowerblue;
+//     border: none;
+//     outline: none;
+//     margin-right: 80px;
 
-  }
-  svg {
-    height: 3rem;
-    width: 3rem;
-  }
+//   }
+//   svg {
+//     height: 3rem;
+//     width: 3rem;
+//   }
 
-  @media (max-width: 1564px) {
-    margin: 0;
+//   @media (max-width: 1564px) {
+//     margin: 0;
 
-    button {
-      z-index: 1;
-    }  
-    svg {
-      visibility: visible;
-    }
-  }
-`;
+//     button {
+//       z-index: 1;
+//     }  
+//     svg {
+//       visibility: visible;
+//     }
+//   }
+// `;
 
 
 const Header = ({ siteTitle }) => (
@@ -147,34 +149,7 @@ const Header = ({ siteTitle }) => (
 
 
       <NavContainer>
-        <MobileNavWrapper>
-          <Toggle>
-            {({ on, toggle }) => (
-            <>
-              <button type="button" onClick={toggle}><FiMenu /></button>
-              <NavMenu on={on} toggle={toggle}>
-                <ul>
-                  <li>
-                    <Link to="/" onClick={toggle}>Home</Link>
-                  </li>
-                  <hr />
-                  <li>
-                    <Link to="/about/" onClick={toggle}>About</Link>
-                  </li>
-                  <hr />
-                  <li>
-                    <Link to="/contact/" onClick={toggle}>Contact</Link>
-                  </li>
-                  <hr />
-                  <li>
-                    <Link to="/portfolio/" onClick={toggle}>Portfolio</Link>
-                  </li>
-                </ul>
-              </NavMenu>
-            </>
-            )}
-          </Toggle>
-        </MobileNavWrapper>
+
 
         <ul>
           <li>
@@ -193,6 +168,17 @@ const Header = ({ siteTitle }) => (
       </NavContainer>
     </HeaderContainer>
   </HeaderWrapper>
+        // <MobileNavWrapper>
+        //   <Toggle>
+        //     {({ on, toggle }) => (
+        //       <div>
+        //         <button onClick={toggle}>Show</button>
+        //         {on && <NavMenu on={on} />}
+        //       </div> 
+
+        //     )}
+        //   </Toggle>
+        // </MobileNavWrapper>
 );
 
 export default Header;

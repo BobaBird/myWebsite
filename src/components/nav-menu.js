@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-// import Portal from '../Utilities/portal';
-
+import { Link } from 'gatsby';
+// import Toggle from '../Utilities/toggle';
 
 const MobileNavWrapper = styled.div`
+    position: absolute;
     display: flex;
     justify-content: center;
     text-align: center;
-    position: absolute;
     top: 4rem;
+    top: 80px;
     left: 0;
     width: 100%;
-    height: 55%;
+    // height: 55%;
     background: #323944;
     // border-radius: 5px;
-    margin-top: 20px;
+    // margin-top: 20px;
     box-shadow: 0px 10px 8px rgba(20, 20, 20, 0.6);
-    z-index: 10;
+    z-index: 99;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
         Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
@@ -47,16 +48,28 @@ const MobileNavWrapper = styled.div`
 
 export default class NavMenu extends Component {
   render() {
-    const { children, on } = this.props;
+    const { children, toggle, on } = this.props;
     return (
       <div>
-        {on
-        && (
+
         <MobileNavWrapper>
-          <div>{children}</div>
+
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about/">About</Link>
+          </li>
+          <li>
+            <Link to="/contact/">Contact</Link>
+          </li>
+          <li>
+            <Link to="/portfolio/">Portfolio</Link>
+          </li>
+        </ul>
         </MobileNavWrapper>
-        )
-        }
+
       </div>
     );
   }

@@ -2,10 +2,49 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
+import { FiMenu } from 'react-icons/fi';
+import Toggle from '../Utilities/toggle';
+import NavMenu from './nav-menu';
 
 import Header from './header'
 import Footer from './footer'
 import './layout.css'
+
+const MobileNavWrapper = styled.div`
+  margin-left: 50px;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  top: 20px;
+  z-index: 99;
+
+
+  button {
+    background: inherit;
+    color: cornflowerblue;
+    border: none;
+    outline: none;
+    margin-right: 80px;
+
+  }
+  svg {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  @media (max-width: 1564px) {
+    margin: 0;
+
+    button {
+      z-index: 1;
+    }  
+    svg {
+      visibility: visible;
+    }
+  }
+`;
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -30,6 +69,17 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <MobileNavWrapper>
+          <Toggle>
+            {({ on, toggle }) => (
+              <div>
+                <button onClick={toggle}><FiMenu /></button>
+                {on && <NavMenu on={on} />}
+              </div> 
+
+            )}
+          </Toggle>
+        </MobileNavWrapper>
         <div
           style={{
             position: 'relative',
