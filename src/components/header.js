@@ -105,7 +105,7 @@ const NavContainer = styled.div`
   }
   @media (max-width: 1565px) and (min-width: 1051px) {
     ul {
-      margin-right: 
+
     }
   }
 `;
@@ -132,7 +132,7 @@ const MobileNavWrapper = styled.div`
   }
 
   @media (max-width: 574px) {
-
+    left: 40vw;
     button {
 
     }

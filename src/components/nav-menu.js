@@ -10,8 +10,8 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: right;
     text-align: center;
-    top: 4rem;
-    top: 90px;
+    // top: 4rem;
+    top: 80px;
     left: 0;
     width: 100%;
     padding: 20px;
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
         list-style: none;
         li {
             padding: 20px 0;
-            width: 30vw;
+            // width: 30vw;
             a {
                 text-decoration: none;
                 color: #fff;
@@ -42,6 +42,7 @@ const Wrapper = styled.div`
     @media (max-width: 574px) {
       ul {
         li {
+          letter-spacing: none;
           padding: 20px;
           width: 65vw;
         }
