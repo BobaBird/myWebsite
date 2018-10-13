@@ -49,9 +49,6 @@ const HeaderWrapper = styled.div`
 
     }
   }
-  .active {
-
-  }
 
   @media (max-width: 1050px) {
     margin: 0;
@@ -102,7 +99,8 @@ const NavContainer = styled.div`
 
   @media (max-width: 1050px) {
     ul {
-      visibility: hidden;
+      // visibility: hidden;
+      display: none;
     }
   }
   @media (max-width: 1565px) and (min-width: 1051px) {
@@ -134,13 +132,17 @@ const MobileNavWrapper = styled.div`
   }
 
   @media (max-width: 574px) {
+
     button {
-      margin-left: 200px;
+
     }
   }
 
   @media (max-width: 1050px) {
-    margin: 0px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
     button {
       z-index: 1;
@@ -205,17 +207,6 @@ const Header = ({ siteTitle }) => (
       </NavContainer>
     </HeaderContainer>
   </HeaderWrapper>
-        // <MobileNavWrapper>
-        //   <Toggle>
-        //     {({ on, toggle }) => (
-        //       <div>
-        //         <button onClick={toggle}>Show</button>
-        //         {on && <NavMenu on={on} />}
-        //       </div> 
-
-        //     )}
-        //   </Toggle>
-        // </MobileNavWrapper>
 );
 
 export default Header;
