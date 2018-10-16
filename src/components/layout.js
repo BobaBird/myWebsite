@@ -40,7 +40,7 @@ const Layout = ({ children }) => (
             // maxWidth: 960,
             // padding: '0px 1.0875rem 1.45rem',
             paddingTop: 0,
-            minHeight: '100vh',
+            minHeight: '110vh',
             fontFamily: `-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
             Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,
           }}

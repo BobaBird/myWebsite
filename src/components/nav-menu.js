@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { Spring, Transition } from 'react-spring';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import Toggle from '../Utilities/toggle';
-import Portal from './portal';
+// import { Link } from 'gatsby';
+
+import { Portal } from '../Utilities'
 
 const Wrapper = styled.div`
     position: absolute;
@@ -39,7 +40,7 @@ const Wrapper = styled.div`
     }
 
 
-    @media (max-width: 574px) {
+    @media (max-width: 574px)
       ul {
         li {
           letter-spacing: none;
@@ -54,27 +55,19 @@ export default class NavMenu extends Component {
   render() {
     const { children, toggle, on } = this.props;
     return (
-      
-          <Wrapper>
-            <ul>
-              <li>
-                <Link to="/" onClick={toggle}>Home</Link>
-              </li>
-              <hr />
-              <li>
-                <Link to="/about/" onClick={toggle}>About</Link>
-              </li>
-              <hr />
-              <li>
-                <Link to="/contact/" onClick={toggle}>Contact</Link>
-              </li>
-              <hr />
-              <li>
-                <Link to="/portfolio/" onClick={toggle}>Portfolio</Link>
-              </li>
-            </ul>
-          </Wrapper>
+
+      <Portal>
+        <Transition from={{ y: -20, opacity: 0 }} enter={{ y: 20, opacity: 1 }} leave={{ y: -20, opacity: 0 }}>  
+          {on && ( styles => (
+            <Wrapper style={{ transform: `translate3d( 0, ${styles.y}px, 0 )`, ...styles }}>
+                <div>{children}</div>
+              </Wrapper>
+          ))}
+        </Transition>    
+      </Portal>
 
     );
   }
 }
+
+

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { Transition } from 'react-spring';
 import { FiMenu } from 'react-icons/fi';
-import Toggle from '../Utilities/toggle';
 import NavMenu from './nav-menu';
-import Portal from './portal';
+import { Toggle, Portal } from '../Utilities'
+
 
 const HeaderWrapper = styled.div`
   position: relative;
@@ -93,9 +94,7 @@ const NavContainer = styled.div`
       border-bottom: 5px solid cornflowerblue;
     }
   }
-  .active {
-    border-bottom: 5px solid cornflowerblue;
-  }
+  
 
   @media (max-width: 1050px) {
     ul {
@@ -175,20 +174,38 @@ const Header = ({ siteTitle }) => (
           <Toggle>
             {({ on, toggle }) => (
               <>
-                <button onClick={toggle}><FiMenu /></button>
-                <Portal>
-                  {on && <NavMenu on={on} toggle={toggle}/>  }
-                </Portal>
-              </> 
+                <button onClick={toggle}>
+                    <FiMenu />
+                </button>
 
+                  {on && 
+                  <NavMenu on={on} toggle={toggle} >
+                    <ul>
+                      <li>
+                        <Link to="/" onClick={toggle}>Home</Link>
+                      </li>
+                      <hr />
+                      <li>
+                        <Link to="/about/" onClick={toggle}>About</Link>
+                      </li>
+                      <hr />
+                      <li>
+                        <Link to="/contact/" onClick={toggle}>Contact</Link>
+                      </li>
+                      <hr />
+                      <li>
+                        <Link to="/portfolio/" onClick={toggle}>Portfolio</Link>
+                      </li>
+                    </ul>
+                  </NavMenu>  
+                  } 
+              </> 
             )}
           </Toggle>
         </MobileNavWrapper>
 
 
       <NavContainer>
-
-
         <ul>
           <li>
             <Link to="/">Home</Link>
