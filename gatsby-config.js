@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Leo-T',
+        name: 'Leo Torres',
         short_name: 'Leo-T',
         start_url: '/',
         // background_color: '#663399',
