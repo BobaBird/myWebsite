@@ -12,7 +12,7 @@ import Footer from './footer'
 import './layout.css'
 
 const MobileNavWrapper = styled.div`
-  margin-left: 50px;
+  // margin-left: 50px;
   width: 100vw;
   position: absolute;
   display: flex;

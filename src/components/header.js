@@ -71,7 +71,7 @@ const LogoContainer = styled.div`
   text-decoration: none;
 
   @media (max-width: 1565px) {
-    width: 70vw;
+    width: 60vw;
   }
 `;
 
@@ -85,9 +85,9 @@ const NavContainer = styled.div`
       border-bottom: 5px solid cornflowerblue;
     }
   }
-  .active {
-    border-bottom: 5px solid cornflowerblue;
-  }
+  // .active {
+  //   border-bottom: 5px solid cornflowerblue;
+  // }
 
   @media (max-width: 1565px) {
     ul {
