@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => (
   <Wrapper>
     <Img
       style={{
-        position: 'fixed',
+        position: 'absolute',
         // backgroundAttachment: 'fixed',
         top: '0',
         left: '0',
