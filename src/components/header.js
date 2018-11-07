@@ -96,37 +96,6 @@ const NavContainer = styled.div`
   }
 `;
 
-// const MobileNavWrapper = styled.div`
-//   // margin-left: 500px;
-//   width: 100vw;
-//   position: absolute;
-//   display: flex;
-
-//   button {
-//     background: inherit;
-//     color: cornflowerblue;
-//     border: none;
-//     outline: none;
-//     margin-right: 80px;
-
-//   }
-//   svg {
-//     height: 3rem;
-//     width: 3rem;
-//   }
-
-//   @media (max-width: 1564px) {
-//     margin: 0;
-
-//     button {
-//       z-index: 1;
-//     }  
-//     svg {
-//       visibility: visible;
-//     }
-//   }
-// `;
-
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
@@ -164,17 +133,6 @@ const Header = ({ siteTitle }) => (
       </NavContainer>
     </HeaderContainer>
   </HeaderWrapper>
-        // <MobileNavWrapper>
-        //   <Toggle>
-        //     {({ on, toggle }) => (
-        //       <div>
-        //         <button onClick={toggle}>Show</button>
-        //         {on && <NavMenu on={on} />}
-        //       </div> 
-
-        //     )}
-        //   </Toggle>
-        // </MobileNavWrapper>
 );
 
 export default Header;
