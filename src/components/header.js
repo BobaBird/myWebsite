@@ -11,7 +11,7 @@ const HeaderWrapper = styled.div`
   position: relative;
   display: inline-flex;
   max-width: 100vw;
-  // overflow: hidden;
+  overflow: hidden;
   // padding: 1.45rem 0rem 1.45rem;
   background: inherit;
   marginBottom: 1.45rem;

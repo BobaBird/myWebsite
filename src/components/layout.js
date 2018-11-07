@@ -46,7 +46,7 @@ const MobileNavWrapper = styled.div`
       z-index: 1;
     }  
     svg {
-      
+      z-index: 10;
       margin: 0;
       visibility: visible;
     }
