@@ -39,7 +39,7 @@ const MobileNavWrapper = styled.div`
 
   }
 
-  @media (max-width: 1564px) {
+  @media (max-width: 1565px) {
     margin: 0;
 
     button {

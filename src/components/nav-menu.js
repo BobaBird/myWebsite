@@ -12,10 +12,7 @@ const MobileNavWrapper = styled.div`
     top: 80px;
     left: 0;
     width: 100%;
-    // height: 55%;
     background: #323944;
-    // border-radius: 5px;
-    // margin-top: 20px;
     box-shadow: 0px 10px 8px rgba(20, 20, 20, 0.6);
     z-index: 99;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,

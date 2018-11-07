@@ -57,6 +57,7 @@ const About = ({ data }) => (
       />   
   <Layout>
     <Container>
+    <title>About</title>
     <h1>About</h1>
     <p>
       Hi, my name is Leo Torres. I enjoy making the internet one website at a time. I'm a one

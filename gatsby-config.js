@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Leo-T',
+    description: 'web Developer',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -20,7 +21,7 @@ module.exports = {
         name: 'Leo Torres',
         short_name: 'Leo-T',
         start_url: '/',
-        // background_color: '#663399',
+        background_color: 'gray',
         // theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/fav-icon.png', // This path is relative to the root of the site.
