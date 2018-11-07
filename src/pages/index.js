@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => (
     <Img
       style={{
         position: 'absolute',
-        backgroungAttachment: 'fixed',
+        backgroundAttachment: 'fixed',
         top: '0',
         left: '0',
         width: '100%',
