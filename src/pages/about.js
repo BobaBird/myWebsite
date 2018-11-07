@@ -44,7 +44,7 @@ const About = ({ data }) => (
     <Img
       style={{
         position: 'absolute',
-        // backgroundAttachment: 'fixed',
+        backgroundSize: 'cover',
         top: '0',
         left: '0',
         width: '100%',
