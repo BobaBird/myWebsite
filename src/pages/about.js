@@ -46,12 +46,12 @@ const About = ({ data }) => (
         position: 'absolute',
         top: '0',
         left: '0',
-        width: '100vw',
+        width: '100%',
         // height: '122.82vh',
         height: '142vh',
         filter: 'brightness(80%)',
         overflow: 'hidden',
-        zIndex: '-1',
+        zIndex: '-10',
       }}
       fluid={data.background.fluid} alt="Bears in the mist." 
       />   
