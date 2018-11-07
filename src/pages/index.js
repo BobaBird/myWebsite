@@ -42,11 +42,12 @@ const IndexPage = ({ data }) => (
     <Img
       style={{
         position: 'absolute',
+        backgroungAttachment: 'fixed',
         top: '0',
         left: '0',
         width: '100%',
-        // height: '122.82vh',
-        height: '142vh',
+        height: '122.82vh',
+        // height: '120vh',
         filter: 'brightness(80%)',
         overflow: 'hidden',
         zIndex: '-10',
