@@ -116,7 +116,7 @@ const Card = styled.div`
     display: block;
     padding: 0;
     margin: 40px auto;
-    width: 50vw;
+    width: 65vw;
   }
   `
 

@@ -40,7 +40,7 @@ const Wrapper = styled.div`
 `
 
 const About = ({ data }) => (
-  <Wrapper>
+  <>
     <Img
       style={{
         position: 'absolute',
@@ -73,7 +73,7 @@ const About = ({ data }) => (
     </p>
     </Container>
   </Layout>
-  </Wrapper> 
+  </> 
 )
 
 export default About

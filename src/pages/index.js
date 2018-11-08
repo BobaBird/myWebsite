@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 `;
 
 const IndexPage = ({ data }) => (
-  <Wrapper>
+  <>
     <Img
       style={{
         position: 'absolute',
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => (
         <p>Custom sites for what you need.</p>
       </Container>
     </Layout>
-  </Wrapper>
+  </>
 );
 
 export default IndexPage;
