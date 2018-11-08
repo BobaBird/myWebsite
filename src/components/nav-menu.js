@@ -47,7 +47,7 @@ export default class NavMenu extends Component {
   render() {
     const { children, toggle, on } = this.props;
     return (
-      <div>
+      <>
         <Toggle>
         {({ on, toggle }) => (
               
@@ -74,7 +74,7 @@ export default class NavMenu extends Component {
             )}
         </Toggle>
 
-      </div>
+      </>
     );
   }
 }
