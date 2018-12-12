@@ -82,7 +82,7 @@ const NavContainer = styled.div`
   a {
     &:hover {
       transition: all 230ms ease;
-      border-bottom: 5px solid cornflowerblue;
+      border-bottom: 3px solid cornflowerblue;
     }
   }
   // .active {
@@ -95,6 +95,11 @@ const NavContainer = styled.div`
     }
   }
 `;
+
+const activeLinkStyle = {
+  borderBottom: '1px solid cornflowerblue',
+  fontWeight: 500,
+}
 
 
 const Header = ({ siteTitle }) => (
@@ -118,16 +123,16 @@ const Header = ({ siteTitle }) => (
       <NavContainer>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" activeStyle={activeLinkStyle}>Home</Link>
           </li>
           <li>
-            <Link to="/about/">About</Link>
+            <Link to="/about/" activeStyle={activeLinkStyle}>About</Link>
           </li>
           <li>
-            <Link to="/contact/">Contact</Link>
+            <Link to="/contact/" activeStyle={activeLinkStyle}>Contact</Link>
           </li>
           <li>
-            <Link to="/portfolio/">Portfolio</Link>
+            <Link to="/portfolio/" activeStyle={activeLinkStyle}>Portfolio</Link>
           </li>
         </ul>
       </NavContainer>
