@@ -98,7 +98,7 @@ const NavContainer = styled.div`
 
 const activeLinkStyle = {
   borderBottom: '1px solid cornflowerblue',
-  fontWeight: 500,
+  fontWeight: 490,
 }
 
 
