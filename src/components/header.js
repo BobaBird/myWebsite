@@ -97,7 +97,7 @@ const NavContainer = styled.div`
   // margin: 0;
   ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     li {
 
     }
