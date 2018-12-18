@@ -49,7 +49,7 @@ const About = ({ data }) => (
         left: '0',
         width: '100%',
         // height: '122.82vh',
-        height: '140vh',
+        height: '150vh',
         filter: 'brightness(80%)',
         overflow: 'hidden',
         zIndex: '-10',
