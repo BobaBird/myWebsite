@@ -69,6 +69,9 @@ const HeaderContainer = styled.div`
 
   @media  (max-width: 1486px) {
     display: block;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
     text-align: center;
   }
 `;
