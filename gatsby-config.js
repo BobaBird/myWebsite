@@ -22,7 +22,7 @@ module.exports = {
         short_name: 'Leo-T',
         start_url: '/',
         background_color: 'gray',
-        // theme_color: '#663399',
+        theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/fav-icon.png', // This path is relative to the root of the site.
       },

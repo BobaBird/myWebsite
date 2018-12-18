@@ -38,18 +38,18 @@ const MobileNavWrapper = styled.div`
 
   }
 
-  @media (max-width: 1565px) {
-    margin: 0;
+  // @media (max-width: 1565px) {
+  //   margin: 0;
 
-    button {
-      z-index: 1;
-    }  
-    svg {
-      z-index: 10;
-      margin: 0;
-      visibility: visible;
-    }
-  }
+  //   button {
+  //     z-index: 1;
+  //   }  
+  //   svg {
+  //     z-index: 10;
+  //     margin: 0;
+  //     visibility: visible;
+  //   }
+  // }
 `;
 
 const Layout = ({ children }) => (
