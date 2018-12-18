@@ -83,6 +83,12 @@ const LogoContainer = styled.div`
   @media (max-width: 1565px) {
     max-width: 60vw;
   }
+  @media  (max-width: 1486px) {
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
 `;
 
 const NavContainer = styled.div`
