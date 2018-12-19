@@ -53,26 +53,24 @@ const MobileNavWrapper = styled.div`
 `;
 
 const PageContainer = styled.div`
-   height: 100%;
-   width: 100%;
-   margin: 0;
-   padding: auto 18%;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: top;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  //  padding: auto 18%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
             Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 `;
 
 const MainContent = styled.div`
   // background-color: #fafafa;
-  width: 100%;
+  // width: 1200px;
   padding: 12px 0px 24px;
   margin: 2px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // align-items: center;
 `;
 
 const Layout = ({ children }) => (
