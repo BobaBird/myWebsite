@@ -12,12 +12,12 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
   margin-top: 1.45rem;
-  max-width: 960px;
+  max-width: 1200px;
   text-shadow: 2px 2px 8px #4d4d4d, -2px -2px 8px #4d4d4d;
   color: #fff;
   h1 {
     padding-top: 100px;
-    font-size: 4.25rem;
+    font-size: 5.25rem;
     font-weight: 300;
   }
   h2 {
@@ -47,12 +47,15 @@ const IndexPage = ({ data }) => (
       style={{
         position: 'absolute',
         backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        margin: '0px',
         top: '0',
         left: '0',
         width: '100%',
-        // height: '122.82vh',
-        height: '140vh',
-        filter: 'brightness(80%)',
+        height: '122.82vh',
+        // height: '100vh',
+        filter: 'brightness(70%)',
         overflow: 'hidden',
         zIndex: '-10',
       }}

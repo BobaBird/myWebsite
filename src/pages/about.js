@@ -19,7 +19,7 @@ const Container = styled.div`
   text-shadow: 2px 2px 8px #4d4d4d, -2px -2px 8px #4d4d4d;
   color: #fff;
   p {
-    font-size: 1.8rem;
+    font-size: 1.85rem;
     line-height: 2.9rem;
     font-weight: 300;
 
@@ -28,7 +28,7 @@ const Container = styled.div`
     }
   }
   h1 {
-    font-size: 4.25rem;
+    font-size: 5.25rem;
     font-weight: 300;
   }
   a {
@@ -50,12 +50,14 @@ const About = ({ data }) => (
       style={{
         position: 'absolute',
         backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
         top: '0',
         left: '0',
         width: '100%',
-        // height: '122.82vh',
-        height: '140vh',
-        filter: 'brightness(80%)',
+        height: '122.82vh',
+        // height: '100vh',
+        filter: 'brightness(70%)',
         overflow: 'hidden',
         zIndex: '-10',
       }}
