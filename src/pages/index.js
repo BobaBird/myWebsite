@@ -35,6 +35,11 @@ const Container = styled.div`
       border-bottom: 2px solid;
     }
   }
+  @media (max-width: 475px) {
+    h1 {
+      font-size: 4.25rem;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
