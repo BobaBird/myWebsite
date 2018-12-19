@@ -42,15 +42,16 @@ const Container = styled.div`
     color: #4d4d4d;
 
     h1 {
-      font-size: 3.25rem;
+      font-size: 4.25rem;
       font-weight: 300;
     }
     p {
-
+      font-size: 1.3rem;
     }
     a {
-    color: #4d4d4d;
-    text-decoration: none;
+      font-size: 1.2rem;
+      color: #4d4d4d;
+      text-decoration: none;
       &:hover {
         color: #898989;
         border-bottom: 2px solid;
