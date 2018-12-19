@@ -57,9 +57,6 @@ const IndexPage = ({ data }) => (
     <Img
       style={{
         position: 'absolute',
-        // backgroundSize: 'cover',
-        // backgroundRepeat: 'no-repeat',
-        // backgroundPosition: 'center center',
         margin: '0px',
         padding: 'auto 18px',
         top: '0',

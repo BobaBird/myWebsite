@@ -41,20 +41,20 @@ const Container = styled.div`
   }
 `
 const Wrapper = styled.div`
-  
+  height: 90vh;
+  width: 100%;
 `
 
 const About = ({ data }) => (
-  <>
+  <Wrapper>
     <Img
       style={{
         position: 'absolute',
-        backgroundSize: 'cover',
         top: '0',
         left: '0',
         width: '100%',
-        // height: '122.82vh',
-        height: '140vh',
+        height: '122.82vh',
+        // height: '140vh',
         filter: 'brightness(70%)',
         overflowY: 'hidden',
         zIndex: '-10',
@@ -78,7 +78,7 @@ const About = ({ data }) => (
     </p>
     </Container>
   </Layout>
-  </> 
+  </Wrapper> 
 )
 
 export default About
