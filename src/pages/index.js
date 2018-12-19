@@ -44,8 +44,8 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-height: 100vh;
-// width: 100%;
+height: 90vh;
+width: 100%;
 @media (max-width: 475px) {
 
   // background: #323944;
