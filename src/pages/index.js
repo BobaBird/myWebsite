@@ -37,6 +37,7 @@ const Container = styled.div`
   }
   @media (max-width: 475px) {
     h1 {
+      padding-top: 0;
       font-size: 4.25rem;
     }
   }
