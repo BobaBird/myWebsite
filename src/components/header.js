@@ -79,6 +79,7 @@ const HeaderContainer = styled.div`
 const LogoContainer = styled.div`
   min-width: 70vw;
   text-decoration: none;
+  padding-left: 0;
 
   @media (max-width: 1565px) {
     max-width: 60vw;
