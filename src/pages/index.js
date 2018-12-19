@@ -44,11 +44,13 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-
+@media (max-width: 475px) {
+  background: #323944;
+  }
 `;
 
 const IndexPage = ({ data }) => (
-  <>
+  <Wrapper>
     <Img
       style={{
         position: 'absolute',
@@ -75,7 +77,7 @@ const IndexPage = ({ data }) => (
         <p>Custom sites for what you need.</p>
       </Container>
     </Layout>
-  </>
+  </Wrapper>
 );
 
 export default IndexPage;
