@@ -43,10 +43,10 @@ const Container = styled.div`
   @media (max-width: 475px) {
     h1 {
       padding-top: 0;
-
+      font-size: 3rem;
     }
     p {
-      font-size: 1.8rem;
+      font-size: 1.2rem;
     }
   }
 `
