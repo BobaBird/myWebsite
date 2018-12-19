@@ -39,6 +39,16 @@ const Container = styled.div`
       border-bottom: 2px solid;
     }
   }
+
+  @media (max-width: 475px) {
+    h1 {
+      padding-top: 0;
+
+    }
+    p {
+      font-size: 1.8rem;
+    }
+  }
 `
 const Wrapper = styled.div`
   height: 90vh;
