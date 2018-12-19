@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 
 const Container = styled.div`
   position: relative;
+  text-align: center;
   z-index: 2;
   margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
@@ -21,9 +22,13 @@ const Container = styled.div`
     font-size: 1.8rem;
     line-height: 2.9rem;
     font-weight: 300;
+
+    a {
+      text-align: left !important;
+    }
   }
   h1 {
-    font-size: 3.25rem;
+    font-size: 4.25rem;
     font-weight: 300;
   }
   a {

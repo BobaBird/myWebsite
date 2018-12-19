@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 
 const Container = styled.div`
   position: relative;
+  text-align: center;
   z-index: 2;
   margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
@@ -16,12 +17,12 @@ const Container = styled.div`
   color: #4d4d4d;
 
   h1 {
-    font-size: 3.25rem;
+    font-size: 4.25rem;
     font-weight: 300;
   }
 
   p {
-    
+    font-size: 1.3rem;
   }
   a {
     color: #4d4d4d;
@@ -96,7 +97,7 @@ const Container = styled.div`
   }
   #textArea {
     display: block;
-    margin-left: 225px;
+    // margin-left: 225px;
     padding: 20px 0;
   }
   

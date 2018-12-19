@@ -75,7 +75,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <MobileNavWrapper>
+        {/* <MobileNavWrapper>
           <Toggle>
             {({ on, toggle }) => (
               <>
@@ -85,7 +85,7 @@ const Layout = ({ children }) => (
 
             )}
           </Toggle>
-        </MobileNavWrapper>
+        </MobileNavWrapper> */}
         <div
           style={{
             position: 'relative',

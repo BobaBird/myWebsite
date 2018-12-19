@@ -7,6 +7,7 @@ import Layout from '../components/layout';
 
 const Container = styled.div`
   position: relative;
+  text-align: center;
   z-index: 2;
   margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
@@ -15,13 +16,16 @@ const Container = styled.div`
   text-shadow: 2px 2px 8px #4d4d4d, -2px -2px 8px #4d4d4d;
   color: #fff;
   h1 {
-    font-size: 3.25rem;
+    padding-top: 100px;
+    font-size: 4.25rem;
     font-weight: 300;
   }
   h2 {
+    font-size: 3rem;
     font-weight: 300;
   }
   p {
+    font-size: 1.8rem;
     color: #fff;
   }
   a {
