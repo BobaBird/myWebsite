@@ -44,8 +44,11 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
+height: 100vh;
+// width: 100%;
 @media (max-width: 475px) {
-  background: #323944;
+
+  // background: #323944;
   }
 `;
 
@@ -54,15 +57,16 @@ const IndexPage = ({ data }) => (
     <Img
       style={{
         position: 'absolute',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center center',
+        // backgroundSize: 'cover',
+        // backgroundRepeat: 'no-repeat',
+        // backgroundPosition: 'center center',
         margin: '0px',
+        padding: 'auto 18px',
         top: '0',
         left: '0',
         width: '100%',
         height: '122.82vh',
-        // height: '140vh',
+        // height: '100vh',
         filter: 'brightness(70%)',
         overflow: 'hidden',
         zIndex: '-10',

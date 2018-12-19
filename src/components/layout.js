@@ -52,6 +52,29 @@ const MobileNavWrapper = styled.div`
   // }
 `;
 
+const PageContainer = styled.div`
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   padding: auto 18%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+            Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+`;
+
+const MainContent = styled.div`
+  // background-color: #fafafa;
+  width: 100%;
+  padding: 12px 0px 24px;
+  margin: 2px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -86,20 +109,22 @@ const Layout = ({ children }) => (
             )}
           </Toggle>
         </MobileNavWrapper> */}
-        <div
-          style={{
-            position: 'relative',
-            margin: '0 auto',
-            // maxWidth: 960,
-            // padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-            minHeight: '100vh',
-            fontFamily: `-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-            Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,
-          }}
+        <PageContainer
+          // style={{
+          //   position: 'relative',
+          //   margin: '0 auto',
+          //   // maxWidth: 960,
+          //   // padding: '0px 1.0875rem 1.45rem',
+          //   paddingTop: 0,
+          //   minHeight: '100vh',
+          //   fontFamily: `-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+          //   Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,
+          // }}
         >
+        <MainContent>
           {children}
-        </div>
+        </MainContent>
+        </PageContainer>
         <Footer />
       </>
     )}
