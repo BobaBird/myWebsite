@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { FiMenu } from 'react-icons/fi';
 import Toggle from '../Utilities/toggle';
 import NavMenu from './nav-menu';
+import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 
 // import NavMenu from './nav-menu';
 
@@ -125,7 +127,7 @@ const activeLinkStyle = {
 }
 
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, data }) => (
   <HeaderWrapper>
     <HeaderContainer>
       <LogoContainer>
@@ -137,6 +139,7 @@ const Header = ({ siteTitle }) => (
               textDecoration: 'none',
             }}
           >
+            {/* <Img src={data.background.fluid}/> */}
             {siteTitle}
           </Link>
         </h1>
@@ -164,3 +167,13 @@ const Header = ({ siteTitle }) => (
 );
 
 export default Header;
+
+export const query = graphql`
+  query logo {
+    background: imageSharp(fluid: {originalName: {eq: "logo2.png" } } ) {
+			fluid(maxWidth: 1240) {
+      ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
