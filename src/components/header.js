@@ -6,7 +6,7 @@ import Toggle from '../Utilities/toggle';
 import NavMenu from './nav-menu';
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
-
+import Image from './image'
 // import NavMenu from './nav-menu';
 
 const HeaderWrapper = styled.div`
@@ -69,6 +69,11 @@ const HeaderContainer = styled.div`
     
   // }
 
+  :first-child {
+    width: 120px;
+    height: 200px;
+  }
+
   @media  (max-width: 1486px) {
     display: block;
     margin: 0 auto;
@@ -79,9 +84,10 @@ const HeaderContainer = styled.div`
 `;
 
 const LogoContainer = styled.div`
-  min-width: 70vw;
+  min-width: 120px;
   text-decoration: none;
   padding-left: 0;
+  
 
   @media (max-width: 1565px) {
     max-width: 60vw;
@@ -131,18 +137,9 @@ const Header = ({ siteTitle, data }) => (
   <HeaderWrapper>
     <HeaderContainer>
       <LogoContainer>
-        <h1>
-          <Link
-            to="/"
-            style={{
-              color: '#1f2023',
-              textDecoration: 'none',
-            }}
-          >
-            {/* <Img src={data.background.fluid}/> */}
-            {siteTitle}
+          <Link to="/" >
+            <Image style={{ maxHeight: '120px', maxWidth: '120px'}}/>
           </Link>
-        </h1>
       </LogoContainer>
 
 
@@ -167,13 +164,3 @@ const Header = ({ siteTitle, data }) => (
 );
 
 export default Header;
-
-export const query = graphql`
-  query logo {
-    background: imageSharp(fluid: {originalName: {eq: "logo2.png" } } ) {
-			fluid(maxWidth: 1240) {
-      ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
