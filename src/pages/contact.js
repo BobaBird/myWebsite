@@ -117,7 +117,7 @@ const Contact = () => (
     <Container>
       <h1>Contact</h1>
       <p>Want to get started; still have questions? Drop me a line.</p>
-      <p />
+      <p/>
 
       <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
