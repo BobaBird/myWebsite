@@ -6,8 +6,8 @@ import Toggle from '../Utilities/toggle';
 const MobileNavWrapper = styled.div`
     position: absolute;
     display: flex;
-    justify-content: center;
-    text-align: center;
+    // justify-content: center;
+    // text-align: center;
     top: 4rem;
     top: 80px;
     left: 0;

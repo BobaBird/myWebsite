@@ -186,6 +186,8 @@ html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  /* background-color: #c2c6ce; */
+  background-color: rgba(20,20,20, 1);
 }
 * {
   box-sizing: inherit;

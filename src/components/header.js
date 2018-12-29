@@ -54,24 +54,25 @@ const HeaderWrapper = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-  
   position: relative;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 95vw;
   padding: 1.45rem 1.0875rem;
-
+  
   // @media (min-width: 1082px) {
-  //   h1 {
-  //     padding-left: 1.25rem;
-  //   }
+    //   h1 {
+      //     padding-left: 1.25rem;
+      //   }
+      
+      // }
+      
+    :first-child {  
+    min-width: 80%;
+    max-width: 120px;
+    max-height: 200px;
     
-  // }
-
-  :first-child {
-    width: 120px;
-    height: 200px;
   }
 
   @media  (max-width: 1486px) {
@@ -90,13 +91,13 @@ const LogoContainer = styled.div`
   
 
   @media (max-width: 1565px) {
-    max-width: 60vw;
+    // max-width: 60vw;
   }
   @media  (max-width: 1486px) {
-    margin: 0 auto;
+    // margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
-    text-align: center;
+    // text-align: center;
   }
 `;
 

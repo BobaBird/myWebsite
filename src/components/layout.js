@@ -64,6 +64,7 @@ const PageContainer = styled.div`
 
 const MainContent = styled.div`
   // background-color: #fafafa;
+  min-height: 120vh;
   // width: 1200px;
   padding: 12px 0px 24px;
   margin: 2px auto;
@@ -119,9 +120,9 @@ const Layout = ({ children }) => (
           //   Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,
           // }}
         >
-        <MainContent>
-          {children}
-        </MainContent>
+            <MainContent>
+              {children}
+            </MainContent>
         </PageContainer>
         <Footer />
       </>
