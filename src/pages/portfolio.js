@@ -133,7 +133,7 @@ const Wrapper = styled.div`
 
 const Portfolio = ({ data }) => (
   <Wrapper>
-    <Layout>
+      <Layout>
         <Container>
 
             <h1>Portfolio</h1>

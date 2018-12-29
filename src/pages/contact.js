@@ -14,7 +14,8 @@ const Container = styled.div`
   margin-top: 1.45rem;
   max-width: 960px;
   min-height: 80vh;
-  color: #4d4d4d;
+  // color: #4d4d4d;
+  color: #c2c6ce;
 
   h1 {
     font-size: 4.25rem;
@@ -112,7 +113,19 @@ const Container = styled.div`
   }
 `;
 
+const Wrapper = styled.div`
+  background: #323944 !important;
+
+  @media  (max-width: 475px) {
+    max-width: 100vw;
+    padding: 0.025rem;
+    overflow: hidden;
+  }
+`;
+
 const Contact = () => (
+  <Wrapper>
+
   <Layout>
     <Container>
       <h1>Contact</h1>
@@ -146,6 +159,7 @@ Your Email:
       <Link to="/">Go back to the homepage</Link>
     </Container>
   </Layout>
+  </Wrapper>  
 );
 
 export default Contact;
