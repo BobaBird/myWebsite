@@ -62,7 +62,7 @@ const HeaderContainer = styled.div`
   padding: 1.45rem 1.0875rem;
       
   :first-child {  
-    min-width: 80%;
+    width: 80%;
     
   }
 
@@ -74,9 +74,8 @@ const HeaderContainer = styled.div`
     text-align: center;
     
     :first-child {  
-      min-width: 10px;
-      max-width: 120px
-      min-height: 10px;
+      width: 120px;
+      height: 200px;
     }
 
   }
