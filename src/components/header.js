@@ -12,7 +12,7 @@ import Image from './image'
 const HeaderWrapper = styled.div`
   position: relative;
   display: flex;
-  max-width: 100vw;
+  // max-width: 100vw;
   overflow: hidden;
   // padding: 1.45rem 0rem 1.45rem;
   background: inherit;
@@ -60,18 +60,9 @@ const HeaderContainer = styled.div`
   margin: 0 auto;
   max-width: 95vw;
   padding: 1.45rem 1.0875rem;
-  
-  // @media (min-width: 1082px) {
-    //   h1 {
-      //     padding-left: 1.25rem;
-      //   }
       
-      // }
-      
-    :first-child {  
+  :first-child {  
     min-width: 80%;
-    max-width: 120px;
-    max-height: 200px;
     
   }
 
@@ -81,6 +72,13 @@ const HeaderContainer = styled.div`
     padding-left: 0;
     padding-right: 0;
     text-align: center;
+    
+    :first-child {  
+      min-width: 10px;
+      max-width: 120px
+      min-height: 10px;
+    }
+
   }
 `;
 
