@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 const size = {
   mobileS: '320px',
@@ -13,8 +13,8 @@ const size = {
   tablet: '768px',
   laptop: '1024px',
   laptopL: '1440px',
-  desktop: '2560px'
-}
+  desktop: '2560px',
+};
 
 export const device = {
   mobileS: `(max-width: ${size.mobileS})`,
@@ -24,8 +24,8 @@ export const device = {
   laptop: `(max-width: ${size.laptop})`,
   laptopL: `(max-width: ${size.laptopL})`,
   desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktop})`
-}
+  desktopL: `(max-width: ${size.desktop})`,
+};
 
 
 const Container = styled.div`
@@ -61,7 +61,7 @@ const Container = styled.div`
       display: block;
     }
 
-`
+`;
 const CardContainer = styled.div`
   display: flex;;
   justify-content: space-around;
@@ -119,7 +119,7 @@ const Card = styled.div`
     margin: 40px auto;
     width: 65vw;
   }
-  `
+  `;
 
 const Wrapper = styled.div`
   background: #323944 !important;
@@ -129,72 +129,74 @@ const Wrapper = styled.div`
     padding: 0.025rem;
     overflow: hidden;
   }
-`
+`;
 
 const Portfolio = ({ data }) => (
   <Wrapper>
-      <Layout>
-        <Container>
+    <Layout>
+      <Container>
 
-            <h1>Portfolio</h1>
-            <p>Please have a look at some examples of my work.</p>
+        <h1>Portfolio</h1>
+        <p>Please have a look at some examples of my work.</p>
 
-            <CardContainer>
-                <Card>
-                    <a href="https://somaticwellness-coach.com/" target="_blank" rel="noopener noreferrer">
-                    <Img
-                        style={{height: '100%'}}
-                        fluid={data.somatic.fluid} 
-                    />
-                    </a>
-                </Card>
+        <CardContainer>
+          <Card>
+            <a href="https://somaticwellness-coach.com/" target="_blank" rel="noopener noreferrer">
+              <Img
+                style={{ height: '100%' }}
+                fluid={data.somatic.fluid}
+              />
+            </a>
+          </Card>
 
-                <Card>
-                    <Img
-                    
-                    fluid={data.card.fluid} 
-                    />
-                </Card>
+          <Card>
+            <a href="https://pizza-f23b6.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
+              <Img
+                style={{ height: '100%' }}
+                fluid={data.pizza.fluid}
+              />
+            </a>
+          </Card>
 
-                <Card>
-                    <Img
-                    
-                    fluid={data.card.fluid} 
-                    />
-                </Card>
-            </CardContainer>
+          <Card>
+            <Img
 
-            <CardContainer>
-            <Card>
-                <Img
-                
-                fluid={data.card.fluid} 
-                />
-            </Card>
+              fluid={data.card.fluid}
+            />
+          </Card>
+        </CardContainer>
 
-            <Card>
-                <Img
-                
-                fluid={data.card.fluid} 
-                />
-            </Card>
+        <CardContainer>
+          <Card>
+            <Img
 
-            <Card>
-                <Img
-                
-                fluid={data.card.fluid} 
-                />
-            </Card>
-            </CardContainer>
+              fluid={data.card.fluid}
+            />
+          </Card>
 
-            <Link to="/">Go back to the homepage</Link>
+          <Card>
+            <Img
 
-        </Container>
+              fluid={data.card.fluid}
+            />
+          </Card>
+
+          <Card>
+            <Img
+
+              fluid={data.card.fluid}
+            />
+          </Card>
+        </CardContainer>
+
+        <Link to="/">Go back to the homepage</Link>
+
+      </Container>
     </Layout>
-  </Wrapper> 
-)
+  </Wrapper>
+);
 
-export default Portfolio
+export default Portfolio;
 
 export const query = graphql`
   query PortfolioQuery {
@@ -208,5 +210,10 @@ export const query = graphql`
       ...GatsbyImageSharpFluid
       }
     }
+    pizza: imageSharp(fluid: {originalName: {eq: "pizza.png" } } ) {
+      fluid(maxWidth: 400) {
+      ...GatsbyImageSharpFluid
+      }
+    }
   }
-`
+`;
