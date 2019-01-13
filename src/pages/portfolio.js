@@ -159,10 +159,12 @@ const Portfolio = ({ data }) => (
           </Card>
 
           <Card>
-            <Img
-
-              fluid={data.card.fluid}
-            />
+            <a href="https://cocky-kowalevski-a61a98.netlify.com/" target="_blank" rel="noopener noreferrer">
+              <Img
+                // style={{ height: '100%' }}
+                fluid={data.calc.fluid}
+              />
+            </a>
           </Card>
         </CardContainer>
 
@@ -211,6 +213,11 @@ export const query = graphql`
       }
     }
     pizza: imageSharp(fluid: {originalName: {eq: "pizza.png" } } ) {
+      fluid(maxWidth: 400) {
+      ...GatsbyImageSharpFluid
+      }
+    }
+    calc: imageSharp(fluid: {originalName: {eq: "calculator.png" } } ) {
       fluid(maxWidth: 400) {
       ...GatsbyImageSharpFluid
       }
