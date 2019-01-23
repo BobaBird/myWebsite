@@ -170,10 +170,12 @@ const Portfolio = ({ data }) => (
 
         <CardContainer>
           <Card>
-            <Img
-
-              fluid={data.card.fluid}
-            />
+            <a href="https://markdown-preview.netlify.com/" target="_blank" rel="noopener noreferrer">
+              <Img
+                style={{ height: '100%' }}
+                fluid={data.markDown.fluid}
+              />
+            </a>
           </Card>
 
           <Card>
@@ -218,6 +220,11 @@ export const query = graphql`
       }
     }
     calc: imageSharp(fluid: {originalName: {eq: "calculator.png" } } ) {
+      fluid(maxWidth: 400) {
+      ...GatsbyImageSharpFluid
+      }
+    }
+    markDown: imageSharp(fluid: {originalName: {eq: "markDown.png" } } ) {
       fluid(maxWidth: 400) {
       ...GatsbyImageSharpFluid
       }
