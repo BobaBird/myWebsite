@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
-import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
@@ -179,10 +178,12 @@ const Portfolio = ({ data }) => (
           </Card>
 
           <Card>
-            <Img
-
-              fluid={data.card.fluid}
-            />
+            <a href="https://gatsby-starter-santa-fe.netlify.com/" target="_blank" rel="noopener noreferrer">
+              <Img
+                style={{ height: '100%' }}
+                fluid={data.santaFe.fluid}
+              />
+            </a>
           </Card>
 
           <Card>
@@ -205,7 +206,7 @@ export default Portfolio;
 export const query = graphql`
   query PortfolioQuery {
     card: imageSharp(fluid: {originalName: {eq: "homeBG.jpg" } } ) {
-			fluid(maxWidth: 1240) {
+      fluid(maxWidth: 1240) {
       ...GatsbyImageSharpFluid
       }
     }
@@ -225,6 +226,11 @@ export const query = graphql`
       }
     }
     markDown: imageSharp(fluid: {originalName: {eq: "markDown.png" } } ) {
+      fluid(maxWidth: 400) {
+      ...GatsbyImageSharpFluid
+      }
+    }
+    santaFe: imageSharp(fluid: {originalName: {eq: "santaFe.png" } } ) {
       fluid(maxWidth: 400) {
       ...GatsbyImageSharpFluid
       }

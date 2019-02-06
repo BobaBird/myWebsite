@@ -126,40 +126,40 @@ const Wrapper = styled.div`
 const Contact = () => (
   <Wrapper>
 
-  <Layout>
-    <Container>
-      <h1>Contact</h1>
-      <p>Want to get started; still have questions? Drop me a line.</p>
-      <p/>
+    <Layout>
+      <Container>
+        <h1>Contact</h1>
+        <p>Want to get started; still have questions? Drop me a line.</p>
+        <p />
 
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact" />
-        <p>
-          <label>Your Name: </label>
-          <input type="text" name="name" required />
-        </p>
-        <p>
-          <label>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p>
+            <label htmlFor="name">Your Name: </label>
+            <input type="text" name="name" required />
+          </p>
+          <p>
+            <label htmlFor="email">
 Your Email:
-            {' '}
-            <input type="email" name="email" required />
-          </label>
-        </p>
+              {' '}
+              <input type="email" name="email" required />
+            </label>
+          </p>
 
-        <p>
-          <label id="textArea">Message </label>
-          <textarea name="message" cols="50" rows="8" required />
+          <p>
+            <label id="textArea" htmlFor="message">Message </label>
+            <textarea name="message" cols="50" rows="8" required />
 
-        </p>
-        <p>
-          <button className="contactBtn " type="submit"><span>Send</span></button>
-        </p>
-      </form>
+          </p>
+          <p>
+            <button className="contactBtn " type="submit"><span>Send</span></button>
+          </p>
+        </form>
 
-      <Link to="/">Go back to the homepage</Link>
-    </Container>
-  </Layout>
-  </Wrapper>  
+        <Link to="/">Go back to the homepage</Link>
+      </Container>
+    </Layout>
+  </Wrapper>
 );
 
 export default Contact;
